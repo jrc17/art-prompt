@@ -1,0 +1,54 @@
+{"subject":[
+   "pet", "bird", "wild animal", "farm animal",
+   "insects", "amphibian", "reptile", "fish",
+    "woman", "man","child","baby","elder",
+    "urban landscape", "town", "landscape", "architecture",
+    "flower", "leaves", "tree",
+    "food", "dessert",
+    "sci-fi", "fantasy creature", "gods", "astrology",
+    "sky", "ocean", "weather","desert","volcanic","forest","valley" ,"mountains",
+    "object", "transportation","still life","interior design",
+    "activity","event/festival",
+    "fashion illustration",
+    "fanart"
+    ],
+    "color":[
+        "red",
+        "orange",
+        "yellow",
+        "green",
+        "blue",
+        "purple",
+        "brown",
+        "white",
+        "black"
+    ],
+    "format":[
+        "surface pattern",
+        "poster",
+        "typography",
+        "digital collage",
+        "scrapbook",
+        "greeting card",
+        "lino print"
+    ],
+    "medium":[
+        "traditional art",
+        "digital art",
+        "art from waste",        
+        "vector art",
+        "pixel art"
+
+    ],
+    "style":[
+        "doodle",
+        "cartoon",
+        "minimalist",
+        "contemporary",
+        "madhubani",
+        "kalankari",
+        "abstract",
+        "pop art",
+        "impressionist",
+        "inking"
+        ]}

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Art prompt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Square+Peg&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <img src="art.png" id="logo" />
+        <h1>Art Prompt Generator</h1>
+      </div>
+    </header>
+    <main>
+      <div class="options-container">
+        <fieldset>
+          <legend>Prompt Options</legend>
+          <div class="prompt-container">
+            <div class="prompt-options">
+              <div>
+                <input
+                  type="checkbox"
+                  value="subject"
+                  id="subject"
+                  class="options"
+                />
+                <label for="subject">Subject</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  value="color"
+                  id="color"
+                  class="options"
+                />
+                <label for="color">Color</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  value="medium"
+                  id="medium"
+                  class="options"
+                />
+                <label for="medium">Medium</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  value="format"
+                  id="format"
+                  class="options"
+                />
+                <label for="format">Format</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  value="style"
+                  id="style"
+                  class="options"
+                />
+                <label for="style">Style</label>
+              </div>
+            </div>
+            <div class="prompt-btns">
+              <button id="all-btn">All</button>
+              <button id="none-btn">None</button>
+              <button id="submit-options">Generate prompt</button>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <section class="random-prompts-section">
+        <h2>Prompts</h2>
+        <div class="random-prompts-container">
+          <div class="prompt-section" id="subject-prompt-section">
+            <div class="prompt-heading">
+              <h3>Subject</h3>
+              <button class="refresh-btn" value="subject">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
+                  />
+                </svg>
+              </button>
+              <div class="lock-container">
+                <label class="lock-img" for="lock-subject"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M13.5 10.5V6.75a4.5 4.5 0 1 1 9 0v3.75M3.75 21.75h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H3.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"
+                    />
+                  </svg>
+                </label>
+                <input
+                  type="checkbox"
+                  value="subject"
+                  id="lock-subject"
+                  class="lock"
+                />
+              </div>
+            </div>
+            <div id="subject-section" class="generated-prompt"></div>
+          </div>
+
+          <div class="prompt-section" id="color-prompt-section">
+            <div class="prompt-heading">
+              <h3>Color</h3>
+              <button class="refresh-btn" value="color">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
+                  />
+                </svg>
+              </button>
+              <div class="lock-container">
+                <label for="lock-color"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M13.5 10.5V6.75a4.5 4.5 0 1 1 9 0v3.75M3.75 21.75h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H3.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"
+                    />
+                  </svg>
+                </label>
+                <input
+                  type="checkbox"
+                  value="color"
+                  id="lock-color"
+                  class="lock"
+                />
+              </div>
+            </div>
+            <div id="color-section" class="generated-prompt"></div>
+          </div>
+
+          <div class="prompt-section" id="medium-prompt-section">
+            <div class="prompt-heading">
+              <h3>Medium</h3>
+              <button class="refresh-btn" value="medium">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
+                  />
+                </svg>
+              </button>
+              <div class="lock-container">
+                <label for="lock-medium"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M13.5 10.5V6.75a4.5 4.5 0 1 1 9 0v3.75M3.75 21.75h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H3.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"
+                    />
+                  </svg>
+                </label>
+                <input
+                  type="checkbox"
+                  value="medium"
+                  id="lock-medium"
+                  class="lock"
+                />
+              </div>
+            </div>
+            <div id="medium-section" class="generated-prompt"></div>
+          </div>
+
+          <div class="prompt-section" id="format-prompt-section">
+            <div class="prompt-heading">
+              <h3>Format</h3>
+              <button class="refresh-btn" value="format">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
+                  />
+                </svg>
+              </button>
+              <div class="lock-container">
+                <label for="lock-format"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M13.5 10.5V6.75a4.5 4.5 0 1 1 9 0v3.75M3.75 21.75h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H3.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"
+                    />
+                  </svg>
+                </label>
+                <input
+                  type="checkbox"
+                  value="format"
+                  id="lock-format"
+                  class="lock"
+                />
+              </div>
+            </div>
+            <div id="format-section" class="generated-prompt"></div>
+          </div>
+
+          <div class="prompt-section" id="style-prompt-section">
+            <div class="prompt-heading">
+              <h3>Style</h3>
+              <button class="refresh-btn" value="style">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
+                  />
+                </svg>
+              </button>
+              <div class="lock-container">
+                <label for="lock-style"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M13.5 10.5V6.75a4.5 4.5 0 1 1 9 0v3.75M3.75 21.75h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H3.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"
+                    />
+                  </svg>
+                </label>
+                <input
+                  type="checkbox"
+                  value="style"
+                  id="lock-style"
+                  class="lock"
+                />
+              </div>
+            </div>
+            <div id="style-section" class="generated-prompt"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

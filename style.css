@@ -47,8 +47,10 @@ button {
   font-family: "Raleway", sans-serif;
 }
 
-button:hover {
-  background-color: #f7567c;
+button:hover,
+.lock-container:hover,
+.lock-container:has(input:checked):hover {
+  background-color: #5d576b;
   color: #fcfcfc;
 }
 
@@ -82,11 +84,6 @@ button:hover {
   justify-self: center;
 }
 
-.lock-container:hover,
-.lock-container:has(input:checked):hover {
-  color: black;
-  background-color: #fffae3;
-}
 .lock-container:has(input:checked) {
   color: #fcfcfc;
   background-color: #f7567c;

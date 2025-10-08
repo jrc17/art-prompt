@@ -7,9 +7,9 @@ body {
   box-sizing: border-box;
 }
 header {
-  background-color: #5d576b;
+  background-color: #fcfcfc;
   font-family: "Square Peg", cursive;
-  color: #fcfcfc;
+  color: black;
 
   padding: 20px 0;
 }
@@ -28,10 +28,9 @@ h3 {
 }
 
 main {
-  padding-top: 20px;
-  background-color: #afafb1aa;
+  background-color: #fcfcfc;
   min-height: 100vh;
-  padding: 20px 0;
+  /* padding: 20px 0; */
 }
 legend {
   font-size: 18px;
@@ -104,8 +103,10 @@ button:hover,
 .options-container {
   background-color: #fffae3;
   padding: 20px;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
+  border-bottom: 1px solid #5d576b;
+  border-top: 1px solid #5d576b;
 }
 .prompt-container {
   width: 65%;
@@ -133,7 +134,7 @@ button:hover,
   justify-self: end;
 }
 .random-prompts-container {
-  background-color: #5d576b;
+  background-color: #f7567c;
   width: 80%;
   margin: 0 auto;
 }
